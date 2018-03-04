@@ -1,0 +1,114 @@
+[2017-01-19 10:16:07.486] [INFO] app - aaa
+[2017-01-19 10:18:32.347] [INFO] APP - aaa
+[2017-01-19 10:18:34.265] [INFO] APP - aaa
+[2017-01-19 10:20:38.798] [INFO] APP - aaa
+[2017-01-19 10:20:52.144] [INFO] APP - aaa
+[2017-01-19 10:20:52.181] [INFO] APP - 
+[2017-01-19 10:21:14.213] [INFO] APP - aaa
+[2017-01-19 10:21:45.073] [INFO] APP - aaa
+[2017-01-19 10:21:45.107] [INFO] APP - 
+[2017-01-19 10:21:47.093] [INFO] APP - aaa
+[2017-01-19 10:21:47.138] [INFO] APP - 
+[2017-01-19 10:23:04.749] [INFO] APP - aaa
+[2017-01-19 10:23:04.797] [INFO] APP - fdsafd
+[2017-01-19 10:23:06.515] [INFO] APP - aaa
+[2017-01-19 10:23:06.552] [INFO] APP - fdsafd
+[2017-01-19 10:23:09.840] [INFO] APP - aaa
+[2017-01-19 10:23:09.877] [INFO] APP - fdsafd
+[2017-01-19 10:23:13.068] [INFO] APP - aaa
+[2017-01-19 10:23:13.105] [INFO] APP - 1111
+[2017-01-19 10:23:14.424] [INFO] APP - aaa
+[2017-01-19 10:23:14.459] [INFO] APP - 1111
+[2017-01-19 10:24:33.576] [INFO] APP - aaa
+[2017-01-19 10:24:33.610] [INFO] APP - 1111
+[2017-01-19 10:31:20.219] [INFO] APP - aaa
+[2017-01-19 10:31:20.255] [INFO] APP - 1111
+[2017-01-19 10:32:01.364] [INFO] APP - aaa
+[2017-01-19 10:32:01.364] [INFO] APP - main.js
+[2017-01-19 10:32:02.991] [INFO] APP - aaa
+[2017-01-19 10:32:03.036] [INFO] APP - 1111
+[2017-01-19 10:32:45.208] [INFO] APP - 1111
+[2017-01-19 10:34:28.961] [INFO] APP - null
+[2017-01-19 10:34:30.602] [INFO] APP - 1111
+[2017-01-19 10:35:20.873] [INFO] APP - 1111
+[2017-01-19 10:35:26.461] [INFO] APP - 1111
+[2017-01-19 10:35:38.427] [INFO] APP - null
+[2017-01-19 10:36:08.126] [INFO] APP - 13132
+[2017-01-19 10:36:08.126] [INFO] APP - null
+[2017-01-19 10:36:33.884] [INFO] APP - request111 13132
+[2017-01-19 10:36:33.900] [INFO] APP - protocolReg done null
+[2017-01-19 10:38:33.624] [INFO] APP - request111 13132
+[2017-01-19 10:38:33.624] [INFO] APP - protocolReg done[object Arguments] null
+[2017-01-19 10:38:46.291] [INFO] APP - request111 13132
+[2017-01-19 10:38:46.291] [INFO] APP - protocolReg done1 null
+[2017-01-19 10:39:05.717] [INFO] APP - request111 13132
+[2017-01-19 10:39:05.717] [INFO] APP - protocolReg done1 null
+[2017-01-19 10:41:22.150] [INFO] APP - request111 13132
+[2017-01-19 10:41:22.150] [INFO] APP - protocolReg done1 null
+[2017-01-19 10:46:01.922] [INFO] APP - request111 13132
+[2017-01-19 10:46:14.142] [INFO] APP - request111 13132
+[2017-01-19 10:46:34.534] [INFO] APP - request111 13132
+[2017-01-19 10:46:34.534] [INFO] APP - protocolReg done1 null
+[2017-01-19 10:52:31.924] [INFO] APP - request111 13132
+[2017-01-19 10:52:31.924] [INFO] APP - { registerStandardSchemes: [Function: registerStandardSchemes],
+  registerServiceWorkerSchemes: [Function: registerServiceWorkerSchemes],
+  registerStringProtocol: [Function: registerStringProtocol],
+  registerBufferProtocol: [Function: registerBufferProtocol],
+  registerFileProtocol: [Function: registerFileProtocol],
+  registerHttpProtocol: [Function: registerHttpProtocol],
+  unregisterProtocol: [Function: unregisterProtocol],
+  isProtocolHandled: [Function: isProtocolHandled],
+  interceptStringProtocol: [Function: interceptStringProtocol],
+  interceptBufferProtocol: [Function: interceptBufferProtocol],
+  interceptFileProtocol: [Function: interceptFileProtocol],
+  interceptHttpProtocol: [Function: interceptHttpProtocol],
+  uninterceptProtocol: [Function: uninterceptProtocol],
+  registerProtocol: [Function],
+  isHandledProtocol: [Function],
+  interceptProtocol: [Function] }
+[2017-01-19 10:52:31.940] [INFO] APP - protocolReg done1 null
+[2017-01-19 10:53:39.820] [INFO] APP - request111 13132
+[2017-01-19 10:53:39.820] [INFO] APP - { registerStandardSchemes: [Function: registerStandardSchemes],
+  registerServiceWorkerSchemes: [Function: registerServiceWorkerSchemes],
+  registerStringProtocol: [Function: registerStringProtocol],
+  registerBufferProtocol: [Function: registerBufferProtocol],
+  registerFileProtocol: [Function: registerFileProtocol],
+  registerHttpProtocol: [Function: registerHttpProtocol],
+  unregisterProtocol: [Function: unregisterProtocol],
+  isProtocolHandled: [Function: isProtocolHandled],
+  interceptStringProtocol: [Function: interceptStringProtocol],
+  interceptBufferProtocol: [Function: interceptBufferProtocol],
+  interceptFileProtocol: [Function: interceptFileProtocol],
+  interceptHttpProtocol: [Function: interceptHttpProtocol],
+  uninterceptProtocol: [Function: uninterceptProtocol],
+  registerProtocol: [Function],
+  isHandledProtocol: [Function],
+  interceptProtocol: [Function] }
+[2017-01-19 10:53:39.836] [INFO] APP - protocolReg error[object Arguments] [Error: registerProtocol API has been replaced by the register[File/Http/Buffer/String]Protocol API family, please switch to the new APIs.]
+Error: registerProtocol API has been replaced by the register[File/Http/Buffer/String]Protocol API family, please switch to the new APIs.
+    at logAndThrow (D:\Users\chen hong qiang\Documents\Software\Other\ChqPortal-win32-x64\resources\electron.asar\browser\api\protocol.js:13:21)
+    at protocol.registerProtocol (D:\Users\chen hong qiang\Documents\Software\Other\ChqPortal-win32-x64\resources\electron.asar\browser\api\protocol.js:20:10)
+    at protocolReg (D:\Users\chen hong qiang\Documents\Software\Other\ChqPortal-win32-x64\resources\app\main.js:73:12)
+    at EventEmitter.<anonymous> (D:\Users\chen hong qiang\Documents\Software\Other\ChqPortal-win32-x64\resources\app\main.js:65:3)
+    at emitOne (events.js:95:20)
+    at EventEmitter.emit (events.js:182:7)
+[2017-01-19 10:54:33.496] [INFO] APP - request111 13132
+[2017-01-19 10:54:33.496] [INFO] APP - { registerStandardSchemes: [Function: registerStandardSchemes],
+  registerServiceWorkerSchemes: [Function: registerServiceWorkerSchemes],
+  registerStringProtocol: [Function: registerStringProtocol],
+  registerBufferProtocol: [Function: registerBufferProtocol],
+  registerFileProtocol: [Function: registerFileProtocol],
+  registerHttpProtocol: [Function: registerHttpProtocol],
+  unregisterProtocol: [Function: unregisterProtocol],
+  isProtocolHandled: [Function: isProtocolHandled],
+  interceptStringProtocol: [Function: interceptStringProtocol],
+  interceptBufferProtocol: [Function: interceptBufferProtocol],
+  interceptFileProtocol: [Function: interceptFileProtocol],
+  interceptHttpProtocol: [Function: interceptHttpProtocol],
+  uninterceptProtocol: [Function: uninterceptProtocol],
+  registerProtocol: [Function],
+  isHandledProtocol: [Function],
+  interceptProtocol: [Function] }
+[2017-01-19 10:54:33.511] [INFO] APP - protocolReg done1 null
+[2017-01-23 09:47:36.314] [INFO] APP - 1111
+[2017-01-23 09:48:31.927] [ERROR] APP - null

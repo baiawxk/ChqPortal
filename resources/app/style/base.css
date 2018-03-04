@@ -1,0 +1,65 @@
+		html,body{
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+		.nav{
+			float:left;
+			height: 100%;
+			width: 12%;
+		}
+		.content{
+			float: left;
+			background-color: white;
+			height: 100%;
+			width: 88%;
+			overflow:hidden;
+		}
+		.menu{
+			background-color: #006699;
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			font-family: Microsoft YaHei;
+			background-color: #006699;
+			height: 100%;
+		}
+		.menu-item.highlight{
+			color: #006699;
+			background-color: white;
+		}
+		.menu-item{
+			cursor: pointer;
+			border-radius: 10px 0px 0px 10px;
+			font-size: 35px;
+			line-height: 60px;
+		}
+		.menu-item-placeholder{
+			padding: 10px;
+		}
+		.content-page{
+			height: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+			overflow-y: auto;
+			background-image: url('../image/213345-106.jpg');
+			color: #006699;
+		}
+		.subMenu{
+			font-size: 28px;
+			cursor:pointer;
+			padding: 5px;
+		}
+		.subMenuTitle{
+			font-size: 30px;
+			padding: 5px;
+			font-weight: bold;
+			font-family: Microsoft YaHei;
+		}
+		.subMenu-remark{
+			font-style: italic;
+			text-indent: 20px;
+			font-size: 20px;
+		}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Article Reader</title>
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script>if (window.module) module = window.module;</script>
+</head>
+<style>
+	html,body{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.article{
+		font-family: Microsoft YaHei;
+		width: 70%;
+		height: 100%;
+		padding: 3rem;
+		box-sizing: border-box;
+		background: white;
+		overflow-y:auto;
+		overflow-x:hidden;
+		font-size: 1.5rem;
+	}
+	input,a,button{
+		display: none;
+	} 
+	code,pre{
+		padding: 16px;
+	    overflow: auto;
+	    font-size: 85%;
+	    line-height: 1.45;
+	    background-color: #f7f7f7;
+	    border-radius: 3px;
+	    margin-bottom: 0;
+   	 	word-break: normal;
+   	 	word-wrap: normal;
+   	 	margin-top: 0;
+	}
+</style>
+<body>
+	<div class="article">
+	
+
+
+
+
+
+	
+	</div>
+	<script>
+		$(function() {
+			$("body").click(function(e) {
+				if($(e.target).is(".article") || $(e.target).parents(".article").length>0)return;
+				else window.close();
+			});
+			$("body").keyup(function(e) {
+				if(e.keyCode==27)window.close();
+			});
+			require('electron').ipcRenderer.on('update', function(event, message) {
+		      update(message);  
+		    });
+		});
+		function update(html) {
+			$(".article").html("")
+			$(".article").html(html);
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>  
+	<title>ChqPortal</title>
+	<meta charset="utf-8"/>  
+	<link rel="stylesheet" href="css/material.css"/>
+	<link rel="stylesheet" href="demo-files/demo.css"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="author" contect="Chen Hong Qiang, baiawxk@qq.com" />
+
+	<!-- 启用 WebApp 全屏模式 -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- 隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<!-- 添加到主屏后的标题 -->
+	<meta name="apple-mobile-web-app-title" content="ChqPortal">
+	<!-- 苹果主屏图标 -->
+	<link rel="apple-touch-icon-precomposed" href="./img/mirror.png" />
+	<!-- 苹果启动页图标 -->
+	<link rel="apple-touch-startup-image" href="./img/mirror.png" />
+
+
+	<!-- 忽略数字自动识别为电话号码 -->
+	<meta content="telephone=no" name="format-detection" />
+	<!-- 忽略识别邮箱 -->
+	<meta content="email=no" name="format-detection" />
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	
+	<!-- 桌面快捷方式图标 -->
+	<link rel="shortcut icon" href="./img/mirror.png" type="image/x-icon">
+
+	<!-- 主题颜色,状态栏颜色 -->
+	<meta name="theme-color" content="#2196f3">
+
+<!-- 	<link rel="apple-touch-icon" sizes="144x144" href="/images/touch/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/touch/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/images/touch/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/images/touch/favicon-16x16.png" sizes="16x16">
+	<link rel="mask-icon" href="/images/touch/safari-pinned-tab.svg" color="#607d8b"> -->
+	<link rel="manifest" href="./manifest.json">
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script>if (window.module) module = window.module;</script>
+	<style>
+		ul li[ripple]{
+			cursor: pointer;
+		}
+		.pointer{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body class="">
+<div class="sidemenu sidebar responsive " id="navigation-sidemenu" hidden>
+	<ul class="menu ">
+		<li ripple><a href="#dashboard"><i class="icon-drive-site"></i>Main</a></li>
+		<li ripple><a href="#setting"><i class="icon-drive-site"></i>Setting</a></li>
+	</ul>
+</div>
+<div class="main-content bg-light-blue-200">
+<div class="toolbar header bg-light-blue-500 color-white">
+	<button class="icon-button" onclick="SideMenu.toggle(document.querySelector('#navigation-sidemenu'))"><i class="icon-menu"></i></button>
+	<label class="toolbar-label"></label>
+	<span style="float:right;">
+		<button class="icon-button" onclick="Dialog.toggle(document.querySelector('#dialog-info'));"><i class="icon-info"></i></button>
+	</span>
+</div>
+	<div class="navigation-section" id="dashboard">
+		
+	</div>
+	
+	<div class="navigation-section" id="setting">
+		<div class="section">
+			<h2>Setting</h2>
+			<div class="switch">
+				<label for="dark-theme-switch">Theme</label>&nbsp;&nbsp;
+				<input type="checkbox" id="dark-theme-switch" onchange="require('chqportal').app.setTheme(this.checked ? 'dark' : 'light')"/>
+				<label for="dark-theme-switch"></label>
+				<label class="form-control-label">Dark</label>
+			</div>
+			<br>
+			<div class="switch">
+				<label for="full-screen-switch">FullScreen</label>&nbsp;&nbsp;
+				<input type="checkbox" id="full-screen-switch" onchange="_toggleFullScreen();"/>
+				<label for="full-screen-switch"></label>
+				<label class="form-control-label">Sure</label>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="confirmDialog" class="dialog" hidden>
+		<h1 class="dialog-title">CONFIRM</h1>
+		<div class="dialog-content"></div>
+		<div class="dialog-footer">
+			<span class="float-right">
+				<button class="button dialog-confirm color-teal-700">Confirm</button>
+				<button class="button dialog-close">Cancel</button>
+			</span>
+		</div>
+	</div>
+	
+	<div id="dialog-info" class="dialog" hidden>
+		<div class="dialog-content1">
+			<h3>About Keys</h3>
+			<ul>
+				<li>alt+1~9&nbsp;在第1~9菜單中切換</li>
+				<li>alt+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;顯示或隱藏本應用</li>
+			</ul>
+			<!-- <h3>About Main</h3>
+			<ul>
+				<li>雙擊空白部分添加面板</li>
+				<li>可修改面板名字</li>
+				<li>右鍵點擊面板或捷徑以刪除</li>
+				<li>拖動桌面圖標至面板可新建捷徑</li>
+				<li>拖動捷徑至不同面板可調整位置</li>
+			</ul>
+			<h3>About FTP</h3>
+			<ul>
+				<li>打開相應的FTP會默認將路徑複製至剪貼板</li>
+			</ul> -->
+			<!-- <h4>ChqPortal 2.0</h4>
+			<p>COPYRIGHT © CHEN HONG QIANG LIMITED.</p> -->
+		</div>
+		<div class="dialog-footer">
+			<span class="float-right">
+				<button class="button dialog-confirm">OK,I Know.</button>
+			</span>
+		</div>
+	</div>
+
+</div>
+<script src="js/material.js"></script>
+<script>
+	function _toggleFullScreen() {
+		var win = require('electron').remote.BrowserWindow.getFocusedWindow();
+		var isFullScreen = win.isFullScreen();
+		if(isFullScreen)
+		{
+			win.setFullScreen(false);
+			require('chqportal').setting.setFullScreen(false);
+		}
+		else
+		{
+			win.setFullScreen(true);
+			require('chqportal').setting.setFullScreen(true);
+		}
+	}
+
+	function _alert(str,success) {
+		var _d = $("#confirmDialog");
+		_d.find(".dialog-title").html("ALERT");
+		_d.find(".dialog-content").empty();
+		_d.find(".button").unbind("click");
+		_d.find(".dialog-close").hide();
+		if(str!=null)
+		{
+			if(typeof str =="string")
+			{
+				$("<div>").html(str).appendTo(_d.find(".dialog-content"));
+			}
+			else
+			{
+				_d.find(".dialog-content").html($(str).html());
+			} 
+		}
+		if(typeof success=="function")_d.find(".dialog-confirm").bind("click",success);
+	}
+
+	function _mailto(url) {
+		require('chqportal').shell.mailto(url);
+	}
+
+	function _confirm(str,success,failure) {
+		var _d = $("#confirmDialog");
+		_d.find(".dialog-title").html("CONFIRM");
+		_d.find(".dialog-content").empty();
+		_d.find(".button").unbind("click");
+		_d.find(".dialog-close").show();
+		if(str!=null)
+		{
+			if(typeof str =="string")
+			{
+				$("<div>").html(str).appendTo(_d.find(".dialog-content"));
+			}
+			else
+			{
+				_d.find(".dialog-content").html($(str).html());
+			} 
+		}
+		if(typeof success=="function")_d.find(".dialog-confirm").bind("click",success);
+		if(typeof failure=="function")_d.find(".dialog-close").bind("click",failure);
+		Dialog.show(_d.get(0));
+	}
+
+	function _open(url) {
+		require('chqportal').win.open(url);
+	}
+
+	function _folder(url) {
+		require('chqportal').win.folder(url);
+	}
+
+	function _ftp(server,str) {
+		var shell = require('chqportal').shell;
+		shell.ftp(server);
+		if(str)shell.copy(str);
+	}
+
+	function _putty(server,str) {
+		var shell = require('chqportal').shell;
+		shell.putty(server);
+		if(str)shell.copy(str);
+	}
+
+	function _winCall(url,param) { 
+		var action = `${url}?${$.param(param)}`;
+		return window.open(action,url.replace(".html","").toUpperCase(),`width=${screen.width*0.7},height=${screen.height*0.7}`);
+	}
+	function _winExec(param) {
+		if(window["_winConsole"])
+		{
+			window["_winConsole"].close();
+		}
+		window["_winConsole"] = _winCall("console.html",param);
+	}
+
+	$(require('chqportal').app.init);
+	$(require('chqportal').dashBoard.init);
+
+	$(function() {
+		window.setting = require('chqportal').setting;
+		// _open("file://")
+		// alert("file://")
+		// let appLog = require('chqportal').logger;
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+CACHE MANIFEST
+
+
+#20161210 v1
+CACHE:
+css/material.css
+js/material.js
+fonts/material-design-icons.eot
+fonts/material-design-icons.svg
+fonts/material-design-icons.ttf
+fonts/material-design-icons.woff
+demo-files/demo.css
+demo-files/demo.js
+img/mirror.png
+
+NETWORK:
+index.html 

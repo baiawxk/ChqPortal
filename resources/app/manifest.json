@@ -1,0 +1,23 @@
+{
+  "short_name": "ChqPortal",
+  "name": "ChqPortal",
+  "description": "For better world",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [{
+    "src": "./img/mirror.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "./img/mirror.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }, {
+    "src": "./img/mirror.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "start_url": "./index.html",
+  "theme_color": "#607d8b",
+  "background_color": "#fff"
+}

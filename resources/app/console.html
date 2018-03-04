@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>  
+	<link rel="stylesheet" href="css/material.css"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="author" contect="Chen Hong Qiang, baiawxk@qq.com" />
+	<title>Console</title>
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script>if (window.module) module = window.module;</script>
+	<style>
+		.main-content{
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.console{
+			overflow-wrap: break-word;
+			word-break:break-all;
+			word-wrap:break-word;
+			white-space: pre-line;
+		}
+		.info{
+			color: #4DD0E1;
+		}
+		.error{
+			color: #FF9800;
+		}
+	</style>
+	<script>
+	$(function() {
+		// require('chqportal').app.theme();
+		var server = getQueryVariable(location.href,"server");
+		var cmd = getQueryVariable(location.href,"cmd");
+		var root = getQueryVariable(location.href,"root");
+		var cmdFile = getQueryVariable(location.href,"cmdFile");
+		var opt = {
+			server:server,
+			cmd:cmd,
+			root:root=="true",
+			cmdFile:cmdFile
+		}
+		$(".server").text("Server	:	"+server);
+		if(cmdFile)
+		{
+			$(".cmd").text("CmdFile	:	"+cmdFile);
+		}
+		else
+		{
+			$(".cmd").text("Cmd	:	"+cmd);
+		}
+		require('chqportal').shell.plink(opt,log,error);
+	})
+
+	function log(str) {
+		$("<p class='info title'>").text(str).appendTo(".console");
+	}
+
+	function error(str) {
+		$("<p class='error title'>").text(str).appendTo(".console");
+	}
+
+	function getQueryVariable(query, variable) {
+	    var _query = query.split('?');
+	    _query.splice(0,1);
+	    query = _query.join();
+	    var vars = query.split('&');
+	    for (var i = 0; i < vars.length; i++) {
+	        var pair = vars[i].split('=');
+	        if (decodeURIComponent(pair[0]) == variable) {
+	            return decodeURIComponent(pair[1]);
+	        }
+	    }
+	}
+	</script>
+</head>
+<body class="dark-theme" >
+	<div class="main-content">
+	<span class="float-right" style="position: absolute;right: 40px;bottom: 40px;z-index: 100">
+		<a href="javascript:void(0)" onclick="window.close();" class="fab bg-yellow-700" target="_blank"><i class="icon-close"></i></a>
+	</span>
+	<div class="section card serif console">
+		<h3>CONSOLE</h3>
+		<div class="title server"></div>
+		<div class="title cmd"></div>
+		<br><br>
+	</div>
+</div>
+</body>
+</html>
